@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Ex 1
+
+Create a form with input fields for your firstname, lastname and age.  
+Extract the values from each input field and display them all in a separate div.
+
+If the length of your name is larger than 5 characters, change the text colour 
+to green. Otherwise, change the text-colour to red.  -->
+
+<h1>Please write your first-, last- name and your age below :</h1>
+
+<form id="myForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" required><br><br>
+    
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" required><br><br>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" required style="margin-left: 43px;">
+    
+    <input type="submit" value="Submit">
+  </form>
+  
+  <div id="output"></div>
+  
+
+
+    
+    <script src="script_1.js"></script>
+</body>
+</html>
