@@ -1,14 +1,14 @@
  // JavaScript code to center the circle element
+ var circle = document.getElementById("circle");
+    
  
- window.addEventListener("DOMContentLoaded", function() {
-    var circle = document.getElementById("circle");
-    var windowWidth = window.innerWidth;
-    var windowHeight = window.innerHeight;
-    var circleSize = 200;
+circle.addEventListener("mouseenter", function(){
+    document.getElementById("result").innerHTML = "You are in the circle";
+})
 
-    var centerX = (windowWidth - circleSize) / 2;
-    var centerY = (windowHeight - circleSize) / 2;
+circle.addEventListener("mouseout", function(){
+    document.getElementById("result").innerHTML = "You are outsite the circle";
+})
 
-    circle.style.left = centerX + "px";
-    circle.style.top = centerY + "px";
-  });
+
+  

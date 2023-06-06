@@ -2,18 +2,29 @@
 <html>
 <head>
   <style>
+     #result {
+        text-align: center;
+        
+    }
+
     #circle {
       width: 200px;
       height: 200px;
       background-color: red;
       border-radius: 50%;
-      margin: 0 auto;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
+
+   
   </style>
 </head>
 <body>
+    
   <div id="circle"></div>
-
+  <div><p id="result"></p></div>
   <script src="script.js"></script>
 </body>
 </html>
