@@ -10,15 +10,15 @@ class cars {
         }
     
         car_info() {
-        return `This car is a <span>${this.brand}</span> and model  <span>${this.model}</span> with <span>${this.power}</span> ps!<br><br>`
+        return `This car is a <span>${this.brand}</span> and model  <span>${this.model}</span> with <span>${this.power}</span> ps, <br>`
         }
     }
     
     const car = document.getElementById("cars")
     
-    car.innerHTML += new cars("Audi", "A6", 300).car_info()
-    car.innerHTML += new cars("BMW", "530d", 150).car_info()
-    car.innerHTML += new cars("Volkswagen", "Passat", 200).car_info()
+    // car.innerHTML += new cars("Audi", "A6", 300).car_info()
+    // car.innerHTML += new cars("BMW", "530d", 150).car_info()
+    // car.innerHTML += new cars("Volkswagen", "Passat", 200).car_info()
     
     class animals {
         race;
@@ -63,3 +63,23 @@ class cars {
             person.innerHTML += new persons("Heinz Fischer", "Austria", 68).person_info()
             person.innerHTML += new persons("Arslan Karaman", "Türkiye", 35).person_info()
             person.innerHTML += new persons("Zikri Malawi", "Malaysia", 18).person_info()
+
+            class New_cars extends cars {
+                constructor(brand, model, power, year, color, speed){
+                super(brand, model, power);
+                this.year = year;
+                this.color = color;
+                this.speed = speed;
+                }
+
+            car_info() {
+                return super.car_info() + `produced in ${this.year} year with the color ${this.color}
+                and has a speed of ${this.speed}km/h.<br><br>`
+            }
+            
+            }
+
+            /* car.innerHTML += new cars("Audi", "A6", 300).car_info() */
+            car.innerHTML += new New_cars("Audi", "A6", 300,2000, "red", 220).car_info()
+            car.innerHTML += new New_cars("BMW", "530d", 150, 2020, "black", 240).car_info()
+            car.innerHTML += new New_cars("Volkswagen", "Passat", 200, 2023, "gray", 260).car_info()
