@@ -10,7 +10,7 @@ power;
     }
 
     car_info() {
-    return `This car is a ${this.brand} and model  ${this.model} with ${this.power} ps!<br><br>`
+    return `This car is a <span>${this.brand}</span> and model  <span>${this.model}</span> with <span>${this.power}</span> ps!<br><br>`
     }
 }
 
@@ -32,7 +32,7 @@ class animals {
         }
     
         animal_info() {
-        return `A ${this.race} is living in ${this.location} with  a weight of ${this.weight} kg!<br><br>`
+        return `A <span>${this.race}</span> is living in <span>${this.location}</span> with  a weight of <span>${this.weight}<span> kg!<br><br>`
         }
     }
     
@@ -54,7 +54,7 @@ class animals {
             }
         
             person_info() {
-            return `${this.name} is from ${this.location} and his age is ${this.age} years!<br><br>`
+            return `<span>${this.name}</span> is from <span>${this.location}</span> and his age is <span>${this.age}</span> years!<br><br>`
             }
         }
         
