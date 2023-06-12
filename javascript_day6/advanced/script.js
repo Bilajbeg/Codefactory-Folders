@@ -19,8 +19,8 @@ let books = `[{
     "Read": "true"
 } , {
     "Title": "The Intelligent Investor",
-    Author": "Benjamin Graham",
-    "EmaiRead": "true"
+    "Author": "Benjamin Graham",
+    "Read": "true"
 } , {
     "Title": "A Brief History of Time",
     "Author": "Stephen Hawking",
@@ -30,5 +30,23 @@ let books = `[{
     "Author": "Nelson Mandela",
     "Read": "true"
 } 
-]`
+]`;
+
+
+
+let newArr = JSON.parse(books)
+
+console.log(newArr);
+
+
+for (const x of newArr) {
+    document.getElementById("result").innerHTML += `
+    <img src="img_girl.jpg" alt="The Lord of the Ring" width="200" height="200"> 
+    <div>
+        <p>${x.Title}</p>
+        <p>${x.Author}</p>
+        <p>Read</p>
+    </div>
+    `;
+}
 
