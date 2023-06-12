@@ -74,6 +74,15 @@ let employee = `[{
 
 /* <-- ------------------------------------------------------------------------ --> */
 
+let employeeData = JSON.parse(employee);
+
+// Print employee details as a table in the console
+console.table(employeeData);
+
+
+/* <-- ------------------------------------------------------------------------ --> */
+
+
 /* let employeeData = JSON.parse(employee);
 
 // Print each employee's details in the console
@@ -89,14 +98,6 @@ employeeData.forEach(function (employee) {
 
 /* <-- ------------------------------------------------------------------------ --> */
 
-let employeeData = JSON.parse(employee);
-
-// Print employee details as a table in the console
-console.table(employeeData);
-
-
-
-/* <-- ------------------------------------------------------------------------ --> */
 
 /* let employeeData = JSON.parse(employee);
 
