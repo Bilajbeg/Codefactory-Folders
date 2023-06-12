@@ -89,12 +89,12 @@ employeeData.forEach(function (employee) {
 
 /* <-- ------------------------------------------------------------------------ --> */
 
-/* let employeeData = JSON.parse(employee); */
+let employeeData = JSON.parse(employee);
 
 // Print employee details as a table in the console
-/* console.table(employeeData);
+console.table(employeeData);
 
- */
+
 
 /* <-- ------------------------------------------------------------------------ --> */
 
