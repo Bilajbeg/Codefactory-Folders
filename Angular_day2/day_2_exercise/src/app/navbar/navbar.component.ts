@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   websiteTitle: string = "Car Rental";
+
+  counter: number = 0;
+
+  countClick() {
+    this.counter = this.counter + 10;
+  }
 }
+
