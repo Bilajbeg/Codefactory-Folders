@@ -22,10 +22,12 @@
                             10€</button></a>
                 </li>
                 <li>
-                    <a class="nav-link">You donated = {{ counter }} €</a>
+                    <a class="nav-link">You donated = {{ counter }} € </a>
                 </li>
                 <li class="nav-item">
-                    <ng-template [ngIf]="counter >= 200">Surprise !!! You are VIP member now</ng-template>
+                    <ng-template [ngIf]="counter >= 200">
+                        <p> ====> Surprise !!! You are VIP member now</p>
+                    </ng-template>
                 </li>
             </ul>
         </div>

@@ -1,0 +1,22 @@
+.navbar {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gray;
+    background-color: lavender;
+
+
+}
+
+.navbar a {
+    color: blue;
+    text-shadow: 1px 1px 1px black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar p {
+    color: blue;
+    text-shadow: 1px 1px 1px black;
+    font-size: 24px;
+    font-weight: bold;
+}
