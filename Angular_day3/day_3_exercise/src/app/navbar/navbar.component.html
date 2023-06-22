@@ -16,15 +16,8 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/contactus">Contact us</a>
                 </li>
-                <ng-template [ngIf]="counter >= 200">
-                    <li class="discount-alert">You got an VIP memeber ! ! !
-                    </li>
-                </ng-template>
             </ul>
-            <form class="d-flex " role="search">
-                <button (click)="countClick()" type="button" class="btn btn-danger btn-donate">Donate 10€</button>
-                <button class="btn btn-outline-dark btn-donate-number" type="button">{{counter}}€</button>
-            </form>
+
         </div>
     </div>
 </nav>
