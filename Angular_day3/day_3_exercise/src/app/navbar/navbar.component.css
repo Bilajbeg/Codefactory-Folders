@@ -1,11 +1,7 @@
-.discount-alert {
-    display: flex;
-    padding-left: 200px;
-    padding-top: 3px;
-    color: red;
-    font-weight: bold;
+.navbar-brand {
+    margin-left: 10px;
 }
 
-button {
-    align-items: flex-end;
+.btn {
+    margin-right: 10px;
 }
