@@ -1,0 +1,8 @@
+<div class="container" *ngIf="product" style="margin-top: 20px; margin-bottom: 30px;">
+    <h2>Product Details</h2>
+    <!-- <img src="{{product.img}}" style="width: 400px;"> -->
+    <p>{{product.name}}</p>
+    <p>{{product.price}}</p>
+    <p>{{product.description}}</p>
+    <button (click)="addToCart()" class="btn btn-primary">Add To Cart</button>
+</div>
