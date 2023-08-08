@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %} {% block title %}Todo{% endblock %} {% block body %}
+<h1>Todo</h1>
+
+<div class="card" style="width: 50%;">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">{{ todo.description }}, <span class="bg-danger">{{ todo.priority }}</span></p>
+        <p>{{ todo.createDate ? todo.createDate|date('Y-m-d H:i:s') : '' }}</p>
+        <a href="{{ path('app_todo_index') }}">back to list</a>
+
+        <a class="btn btn-warning" href="{{ path('app_todo_edit', {'id': todo.id}) }}">edit</a> {{ include('todo/_delete_form.html.twig') }}
+    </div>
+</div>
+
+{% endblock %}

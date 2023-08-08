@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %} {% block title %}Todo index{% endblock %} {% block body %}
+
+<div class="container">
+    <h1>Todo index</h1>
+
+    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1">
+        {% for todo in todos %}
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ todo.name }}</h5>
+                <p class="card-text">{{ todo.description }}</p>
+                <p class="card-text">{{ todo.createDate ? todo.createDate|date('Y-m-d H:i:s') : '' }}</p>
+                <a class="btn btn-warning" href="{{ path('app_todo_show', {'id': todo.id}) }}">show</a>
+                <a class="btn btn-primary" href="{{ path('app_todo_edit', {'id': todo.id}) }}">edit</a>
+            </div>
+        </div>
+
+
+
+        {% else %}
+        <div>
+            No records found
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
