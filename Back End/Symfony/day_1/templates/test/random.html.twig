@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<p>Your number is :{{ randomNum }}</p>
+<p>Your put
+	{{ actual }}
+	to the route</p>
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/random.css') }}">
+{# Here I put single quotations because with double it makes an error #}
+{% endblock %}
+
+
+{% endblock %}
