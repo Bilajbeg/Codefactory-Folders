@@ -2,10 +2,20 @@
 
 {% block title %}New Todo{% endblock %}
 
+{% block stylesheets %}
+<link rel="stylesheet" href="/css/style.css">
+{#
+<link rel="stylesheet" href="{{ asset('css/style.css')}}">
+#}
+
+{% endblock %}
+
 {% block body %}
-    <h1>Create new Todo</h1>
+<div class="container bg-primary mt-5 col-6 rounded">
+    <h1 class="pt-2">Create new Todo</h1>
 
     {{ include('todo/_form.html.twig') }}
 
-    <a href="{{ path('app_todo_index') }}">back to list</a>
+    <a class="btn btn-secondary mb-2" href="{{ path('app_todo_index') }}">back to list</a>
+</div>
 {% endblock %}
