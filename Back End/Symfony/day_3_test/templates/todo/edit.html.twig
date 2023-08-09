@@ -5,12 +5,12 @@
 {% block body %}
 <div class="m-3 p-3">
     <h1>Edit Todo</h1>
-    <div class="">
-        {{ include('todo/_form.html.twig', {'button_label': 'Update'}) }}
 
-        <a href=" {{ path('app_todo_index') }}" class="btn btn-secondary">back to list</a>
+    {{ include('todo/_form.html.twig', {'button_label': 'Update'}) }}
 
-        {{ include('todo/_delete_form.html.twig') }}
-    </div>
+    <a href=" {{ path('app_todo_index') }}" class="btn btn-secondary">back to list</a>
+
+    {{ include('todo/_delete_form.html.twig') }}
+
 </div>
 {% endblock %}

@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/todo')]
+
 class TodoController extends AbstractController
 {
     #[Route('/', name: 'app_todo_index', methods: ['GET'])]
@@ -71,7 +71,7 @@ class TodoController extends AbstractController
     #[Route('/{id}', name: 'app_todo_delete', methods: ['POST'])]
     public function delete(Request $request, Todo $todo, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$todo->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $todo->getId(), $request->request->get('_token'))) {
             $entityManager->remove($todo);
             $entityManager->flush();
         }

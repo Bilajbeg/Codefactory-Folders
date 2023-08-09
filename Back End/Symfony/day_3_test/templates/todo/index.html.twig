@@ -3,39 +3,28 @@
 {% block title %}Todo index{% endblock %}
 
 {% block body %}
-    <h1>Todo index</h1>
+<div class="m-3 p-1">
+    <div class="container">
+        <h1>Todo index</h1>
+        <a class="btn btn-success my-3" href="{{ path('app_todo_new') }}">Create new</a>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Priority</th>
-                <th>CreateDate</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for todo in todos %}
-            <tr>
-                <td>{{ todo.id }}</td>
-                <td>{{ todo.name }}</td>
-                <td>{{ todo.description }}</td>
-                <td>{{ todo.priority }}</td>
-                <td>{{ todo.createDate ? todo.createDate|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('app_todo_show', {'id': todo.id}) }}">show</a>
-                    <a href="{{ path('app_todo_edit', {'id': todo.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1">
+            {% for todo in todos %}
 
-    <a href="{{ path('app_todo_new') }}">Create new</a>
+            <div class="card mx-2" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ todo.name }}</h5>
+                    <p class="card-text">{{ todo.description }}</p>
+                    <p>{{ todo.createDate ? todo.createDate|date('Y-m-d H:i:s') : '' }}</p>
+                    <a class="btn btn-warning" href="{{ path('app_todo_show', {'id': todo.id}) }}">show</a>
+                    <a class="btn btn-primary" href="{{ path('app_todo_edit', {'id': todo.id}) }}">edit</a>
+                </div>
+            </div>
+
+            {% else %}
+            <div class="text-danger fs-3">No records found !!!</div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock %}
